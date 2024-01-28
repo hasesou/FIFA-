@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>FIFAイレブン選出</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>メンバー選出</h1>
+        <h5>ポジション　選手名　所属クラブ　総合値　ポテンシャル値　年齢</h5>
+        <p>GK: {{ countries }}</p>
+        <p>RB: {{ countries2 }}</p>
+        <p>RCB: {{ countries3 }}</p>
+        <p>LCB: {{ countries4 }}</p>
+        <p>LB: {{ countries5 }}</p>
+        <p>RDM: {{ countries6 }}</p>
+        <p>LDM: {{ countries7 }}</p>
+        <p>RM: {{ countries8 }}</p>
+        <p>CAM: {{ countries9 }}</p>
+        <p>LM: {{ countries10 }}</p>
+        <p>ST: {{ countries11 }}</p>
+        <div class="login-form">
+            <form action="/" method="GET">   
+                <button type="submit" class="btn btn-primary btn-block">TOPへ戻る</button>
+            </form>
+        </div>
+    </body>
+</html>

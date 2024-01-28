@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>FIFA分析アプリ</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>FIFAシリーズ分析アプリ</h1>
+        <form method="POST" action="/uploads" enctype="multipart/form-data">
+            <h3>国別での選手数トップ10</h3>
+            <h5>該当シリーズCSV入力</h4>
+            <input placeholder="データ" name="the_file" type="file"/>
+            <input value="抽出" type="submit" id="csvsubmit"/>
+        </form>
+        <form method="POST" action="/uploads2" enctype="multipart/form-data">
+            <h3>21歳以下の若手でポテンシャルが75以上選手を抱えている国トップ10</h3>
+            <h5>該当シリーズCSV入力</h4>
+            <input placeholder="データ" name="the_file" type="file"/>
+            <input value="抽出" type="submit" id="csvsubmit"/>
+        </form>
+        <form method="POST" action="/uploads3" enctype="multipart/form-data">
+            <h3>メンバー選出</h3>
+            <h5>条件入力</h4>
+            <select name="sel">
+                <option value="null" disabled selected>国を選択して下さい</option>
+                <option value="Germany">ドイツ</option>
+                <option value="Portugal">ポルトガル</option>
+                <option value="Argentina">アルゼンチン</option>
+                <option value="Belgium">ベルギー</option>
+                <option value="Italy">イタリア</option>
+                <option value="Austria">オーストリア</option>
+                <option value="Brazil">ブラジル</option>
+                <option value="Spain">スペイン</option>
+                <option value="Croatia">クロアチア</option>
+                <option value="France">フランス</option>
+                <option value="England">イングランド</option>
+                <option value="Chile">チリ</option>
+                <option value="Uruguay">ウルグアイ</option>
+                <option value="Japan">日本</option>
+                <option value="Colombia">コロンビア</option>
+                <option value="Egypt">エジプト</option>
+                <option value="Algeria">アルジェリア</option>
+                <option value="Uruguay">ウルグアイ</option>
+                <option value="Netherlands">オランダ</option>
+                <option value="Senegal">セネガル</option>
+                <option value="Denmark">デンマーク</option>
+            </select>
+            <input placeholder="最低総合値" name="sel2" type="text"/>
+            <input placeholder="最低年齢" name="sel3" type="text"/>
+            <input placeholder="最高年齢" name="sel4" type="text"/>
+            <input placeholder="最低ポテンシャル値" name="sel5" type="text"/>
+            <br><input placeholder="お名前" name="the_file" type="text"/></br>
+            <input placeholder="データ" name="the_file" type="file"/>
+            <br><input value="選出" type="submit" id="csvsubmit"/></br>
+        </form>
+    </body>
+</html>
